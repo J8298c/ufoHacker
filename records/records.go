@@ -12,7 +12,7 @@ type Record struct {
 
 var Records = []Record{
 	{
-		Summary:       "The event occurred on the final night of sleep-away camp, August 22, 1975 at Raquette Lake Boys Camp, Raquette Lake New York.\n\n All s",
+		Summary:       "Gur rirag bppheerq ba gur svany avtug bs fyrrc-njnl pnzc, Nhthfg 22, 1975 ng Endhrggr Ynxr Oblf Pnzc, Endhrggr Ynxr Arj Lbex.\n\n Nyy f",
 		Country:       "USA",
 		City:          "Raquette Lake",
 		State:         "NY",
@@ -21,7 +21,7 @@ var Records = []Record{
 		CityLongitude: -74.652,
 	},
 	{
-		Summary:       "Very beautiful lights that arrived after thunderstorm in Greenpoint, Brooklyn.",
+		Summary:       "Irel ornhgvshy yvtugf gung neevirq nsgre guhaqrefgbez va Terracbvag, Oebbxyla.",
 		Country:       "USA",
 		City:          "New York",
 		State:         "NY",
@@ -30,7 +30,7 @@ var Records = []Record{
 		CityLongitude: -73.9844567179912,
 	},
 	{
-		Summary:       "2007 Circular Object with 3 lights across i87 Hightway in daylight",
+		Summary:       "2007 Pvephyne Bowrpg jvgu 3 yvtugf npebff v87 Uvtugjnl va qnlyvtug",
 		Country:       "USA",
 		City:          "Newburgh",
 		State:         "NY",
@@ -39,7 +39,7 @@ var Records = []Record{
 		CityLongitude: -74.04846678383127,
 	},
 	{
-		Summary:       "I saw the object was exactly what a UFO is typically described as. Sombrero shaped with beaming light under",
+		Summary:       "V fnj gur bowrpg jnf rknpgyl jung n HSB vf glcvpnyyl qrfpevorq nf. Fbzoereb funcrq jvgu ornzvat yvtug haqre",
 		Country:       "USA",
 		City:          "New York",
 		State:         "NY",
@@ -48,7 +48,7 @@ var Records = []Record{
 		CityLongitude: -73.9844567179912,
 	},
 	{
-		Summary:       "Bright, glowing red light transitions from hover to clearing the horizon in seconds .",
+		Summary:       "Oevtug, tybjvat erq yvtug genafvgvbaf sebz ubire gb pyrnevat gur ubevmba va frpbaqf .",
 		Country:       "USA",
 		City:          "Hannawa Falls",
 		State:         "NY",
@@ -57,7 +57,7 @@ var Records = []Record{
 		CityLongitude: -74.97103,
 	},
 	{
-		Summary:       "I went out side on my mother deck to have a cigarette.  I happened to look up facing southwest. There was a yellow, almost sun like col",
+		Summary:       "V jrag bhg fvqr ba zl zbgure qrpx gb unir n pvtnerggr.  V unccrarq gb ybbx hc snpvat fbhgujrfg. Gurer jnf n lryybj, nyzbfg fha yvxr pby",
 		Country:       "USA",
 		City:          "Bayville",
 		State:         "NY",
@@ -66,7 +66,7 @@ var Records = []Record{
 		CityLongitude: -73.5561,
 	},
 	{
-		Summary:       "Hovering ball that was not from this world",
+		Summary:       "Ubirevat onyy gung jnf abg sebz guvf jbeyq",
 		Country:       "USA",
 		City:          "Orchard park",
 		State:         "NY",
@@ -75,7 +75,7 @@ var Records = []Record{
 		CityLongitude: -78.754,
 	},
 	{
-		Summary:       "Myself, son and friend seen an object around 50 to 100 ft from us in the sky.  This object was stationary.  It was bright white at the",
+		Summary:       "Zlfrys, fba naq sevraq frra na bowrpg nebhaq 50 gb 100 sg sebz hf va gur fxl.  Guvf bowrpg jnf fgngvbanel.  Vg jnf oevtug juvgr ng gur",
 		Country:       "USA",
 		City:          "Hornell",
 		State:         "NY",
@@ -84,7 +84,7 @@ var Records = []Record{
 		CityLongitude: -77.65930000000002,
 	},
 	{
-		Summary:       "Triangle/boomerang shaped UFO near washingtonville area",
+		Summary:       "Gevnatyr/obbzrenat funcrq HSB arne jnfuvatgbaivyyr nern",
 		Country:       "USA",
 		City:          "Washingtonville",
 		State:         "NY",
@@ -93,7 +93,7 @@ var Records = []Record{
 		CityLongitude: -74.1617,
 	},
 	{
-		Summary:       "moving north to south slowly, orange glowing ball shaped, very bright. Passed directly overhead at aprox 200ft no sound. Turned right a",
+		Summary:       "zbivat abegu gb fbhgu fybjyl, benatr tybjvat onyy funcrq, irel oevtug. Cnffrq qverpgyl bireurnq ng ncebk 200sg ab fbhaq. Ghearq evtug n",
 		Country:       "USA",
 		City:          "Watertown",
 		State:         "NY",
@@ -102,7 +102,7 @@ var Records = []Record{
 		CityLongitude: -75.90908883333333,
 	},
 	{
-		Summary:       "UNKNOWN OBJECT IN THE SKY",
+		Summary:       "HAXABJA BOWRPG VA GUR FXL",
 		Country:       "USA",
 		City:          "Belmont",
 		State:         "NY",
@@ -111,7 +111,7 @@ var Records = []Record{
 		CityLongitude: -78.011,
 	},
 	{
-		Summary:       "moving north to south slowly, orange glowing ball shaped, very bright. Passed directly overhead at aprox 200ft no sound. Turned right a",
+		Summary:       "zbivat abegu gb fbhgu fybjyl, benatr tybjvat onyy funcrq, irel oevtug. Cnffrq qverpgyl bireurnq ng ncebk 200sg ab fbhaq. Ghearq evtug n",
 		Country:       "USA",
 		City:          "Watertown",
 		State:         "NY",
@@ -120,7 +120,7 @@ var Records = []Record{
 		CityLongitude: -75.90908883333333,
 	},
 	{
-		Summary:       "I notice a space ship hovering over the trees in my backyard,  with flashinglights. It seemed still but when I recorded it on my phone",
+		Summary:       "V abgvpr n fcnpr fuvc ubirevat bire gur gerrf va zl onpxlneq,  jvgu synfuvatyvtugf. Vg frrzrq fgvyy ohg jura V erpbeqrq vg ba zl cubar",
 		Country:       "USA",
 		City:          "Mexico",
 		State:         "NY",
@@ -129,7 +129,7 @@ var Records = []Record{
 		CityLongitude: -76.2472,
 	},
 	{
-		Summary:       "Slow moving object with very bright white lights.",
+		Summary:       "Fybj zbivat bowrpg jvgu irel oevtug juvgr yvtugf.",
 		Country:       "USA",
 		City:          "New York",
 		State:         "NY",
@@ -138,7 +138,7 @@ var Records = []Record{
 		CityLongitude: -73.9844567179912,
 	},
 	{
-		Summary:       "Larchmont, New York",
+		Summary:       "Ynepuzbag, Arj Lbex",
 		Country:       "USA",
 		City:          "Larchmont",
 		State:         "NY",
@@ -147,7 +147,7 @@ var Records = []Record{
 		CityLongitude: -73.7603,
 	},
 	{
-		Summary:       "Hovering flashing circular lights in the sky",
+		Summary:       "Ubirevat synfuvat pvephyne yvtugf va gur fxl",
 		Country:       "USA",
 		City:          "New York",
 		State:         "NY",
@@ -156,7 +156,7 @@ var Records = []Record{
 		CityLongitude: -73.9844567179912,
 	},
 	{
-		Summary:       "2 spheres circling and bouncing off one another above clouds.  ((NUFORC Note:  Advertising lights??  PD))",
+		Summary:       "2 fcurerf pvepyvat naq obhapvat bss bar nabgure nobir pybhqf.  ((AHSBEP Abgr:  Nqiregvfvat yvtugf??  CQ))",
 		Country:       "USA",
 		City:          "Kingston",
 		State:         "NY",
@@ -165,7 +165,7 @@ var Records = []Record{
 		CityLongitude: -74.06714345549737,
 	},
 	{
-		Summary:       "South East direction in sky blue, red, white flashing lights but in a stationary position.  I have seen this numerous times and it does",
+		Summary:       "Fbhgu Rnfg qverpgvba va fxl oyhr, erq, juvgr synfuvat yvtugf ohg va n fgngvbanel cbfvgvba.  V unir frra guvf ahzrebhf gvzrf naq vg qbrf",
 		Country:       "USA",
 		City:          "Camden",
 		State:         "NY",
@@ -174,7 +174,7 @@ var Records = []Record{
 		CityLongitude: -75.7537,
 	},
 	{
-		Summary:       "Massive black “ship” moving slowly about 3X tree height above ground. Black “battleship” floating silently with some lights.",
+		Summary:       "Znffvir oynpx “fuvc” zbivat fybjyl nobhg 3K gerr urvtug nobir tebhaq. Oynpx “onggyrfuvc” sybngvat fvyragyl jvgu fbzr yvtugf.",
 		Country:       "USA",
 		City:          "Brewster",
 		State:         "NY",
@@ -183,7 +183,7 @@ var Records = []Record{
 		CityLongitude: -73.59,
 	},
 	{
-		Summary:       "Glowing Green Orb and Vapor Trail of it's path",
+		Summary:       "Tybjvat Terra Beo naq Incbe Genvy bs vg'f cngu",
 		Country:       "USA",
 		City:          "Buffalo",
 		State:         "NY",
