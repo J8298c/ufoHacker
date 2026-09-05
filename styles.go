@@ -22,18 +22,14 @@ var selectedItemStyle = lipgloss.NewStyle().
 	Foreground(background).
 	Background(lipgloss.Color("#FFB000"))
 
-var bannerStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#8A5A00"))
+var titleStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#8A5A00"))
 
-const asciiBanner = `
-              _____
-         .-'"     "'-.
-      .-'             '-.
-    .'                   '.
-   /                       \
-  |    O     O     O     O  |
-   '-.___________________.-'
-          |    |    |
-          '----+----'
+var blockTitleStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#FFB000"))
 
-  N . U . F . O . R . C.   A R C H I V E
-`
+var taglineStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#8A5A00"))
+
+var warningBoxStyle = lipgloss.NewStyle().
+	Border(lipgloss.NormalBorder()).
+	BorderForeground(lipgloss.Color("#8A5A00")).
+	Foreground(lipgloss.Color("#FFB000")).
+	Padding(0, 1)
