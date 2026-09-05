@@ -3,12 +3,16 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
 	"github.com/j8298c/ufoHacker/records"
 )
+
+const ShiftKey = 13
+const maxAttempts = 3
 
 // model for applications
 type model struct {
@@ -20,6 +24,10 @@ type model struct {
 	height         int
 	screen         string
 	cursor         int
+	guessInput     string
+	attempts       int
+	solved         bool
+	feedback       string
 }
 
 // record structs
@@ -66,9 +74,33 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.cursor++
 			}
 		case "enter":
-			if m.screen == "list" {
+			switch {
+			case m.screen == "list":
 				m.selectedRecord = m.records[m.cursor]
 				m.screen = "detail"
+				m.guessInput = ""
+				m.attempts = maxAttempts
+				m.solved = false
+				m.feedback = ""
+			case m.screen == "detail" && !m.solved:
+				guess, err := strconv.Atoi(m.guessInput)
+				if err == nil && guess == ShiftKey {
+					m.solved = true
+					m.feedback = "ACCESS GRANTED — TRANSMISSION DECRYPTED"
+				} else {
+					m.attempts--
+					if m.attempts <= 0 {
+						m.solved = true
+						m.feedback = "ATTEMPTS EXHAUSTED — AUTO-DECRYPTING TRANSMISSION"
+					} else {
+						m.feedback = fmt.Sprintf("INCORRECT KEY — ATTEMPTS REMAINING: %d", m.attempts)
+					}
+				}
+				m.guessInput = ""
+			}
+		case "backspace":
+			if m.screen == "detail" && !m.solved && len(m.guessInput) > 0 {
+				m.guessInput = m.guessInput[:len(m.guessInput)-1]
 			}
 		case "esc":
 			if m.screen == "detail" {
@@ -79,6 +111,11 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				return m, tea.Quit
 			}
 			m.screen = "list"
+		default:
+			if m.screen == "detail" && !m.solved && len(m.guessInput) < 2 &&
+				len(msg.Text) == 1 && msg.Text[0] >= '0' && msg.Text[0] <= '9' {
+				m.guessInput += msg.Text
+			}
 		}
 	}
 	return m, nil
@@ -90,11 +127,11 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m model) View() tea.View {
 	var content string
 	if m.screen == "detail" {
-		content = scrambledStyles.Render(m.selectedRecord.Summary)
+		content = m.renderDetail()
 	} else {
 		content = m.renderList()
 	}
-	banner := bannerStyle.Width(m.width).Align(lipgloss.Center).Render(asciiBanner)
+	banner := buildBanner(m.width)
 	body := lipgloss.JoinVertical(lipgloss.Left, banner, content)
 	screen := screenStyle.Width(m.width).Height(m.height).Render(body)
 	v := tea.NewView(screen)
@@ -102,10 +139,32 @@ func (m model) View() tea.View {
 	return v
 }
 
+func (m model) renderDetail() string {
+	if m.solved {
+		decoded := CaesarShift(m.selectedRecord.Summary, -ShiftKey)
+		return strings.Join([]string{
+			decodedStyle.Render(decoded),
+			"",
+			decodedStyle.Render(m.feedback),
+		}, "\n")
+	}
+
+	prompt := fmt.Sprintf("ENTER 2-DIGIT SHIFT KEY: %s_", m.guessInput)
+	lines := []string{
+		scrambledStyles.Render(m.selectedRecord.Summary),
+		"",
+		decodedStyle.Render(prompt),
+	}
+	if m.feedback != "" {
+		lines = append(lines, decodedStyle.Render(m.feedback))
+	}
+	return strings.Join(lines, "\n")
+}
+
 func (m model) renderList() string {
 	var lines []string
 	for i, r := range m.records {
-		label := fmt.Sprintf("%s, %s (%s)", r.City, r.State, r.Shape)
+		label := fmt.Sprintf("%s, %s [%.4f, %.4f] (%s)", r.City, r.State, r.CityLatitude, r.CityLongitude, r.Shape)
 		if i == m.cursor {
 			lines = append(lines, selectedItemStyle.Render("> "+label))
 		} else {
