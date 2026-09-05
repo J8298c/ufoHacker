@@ -141,11 +141,16 @@ func (m model) View() tea.View {
 
 func (m model) renderDetail() string {
 	if m.solved {
-		decoded := CaesarShift(m.selectedRecord.Summary, -ShiftKey)
+		r := m.selectedRecord
+		decoded := CaesarShift(r.Summary, -ShiftKey)
 		return strings.Join([]string{
-			decodedStyle.Render(decoded),
-			"",
 			decodedStyle.Render(m.feedback),
+			"",
+			decodedStyle.Render(fmt.Sprintf("LOCATION: %s, %s", r.City, r.State)),
+			decodedStyle.Render(fmt.Sprintf("COORDINATES: %.4f, %.4f", r.CityLatitude, r.CityLongitude)),
+			decodedStyle.Render(fmt.Sprintf("SHAPE: %s", r.Shape)),
+			"",
+			decodedStyle.Render(decoded),
 		}, "\n")
 	}
 
